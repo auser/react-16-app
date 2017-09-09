@@ -9,6 +9,7 @@ import FrontPage from './components/FrontPage';
 import Footer from './components/Footer';
 
 import Home from './pages/Home';
+import SVG from './pages/SVG';
 
 // Content container
 const Container = styled.div`
@@ -22,6 +23,7 @@ const App = props => (
     <Header />
     <Container>
       <Switch>
+        <Route path="/svg" component={SVG} />
         <Route path="/" component={Home} />
       </Switch>
     </Container>

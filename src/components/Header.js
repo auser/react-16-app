@@ -39,11 +39,8 @@ class NavigationHeader extends Component {
       <Header>
         <Logo to="/">Logo</Logo>
         <Navigation role="navigation" style={{top: menu ? 0 : '-100vh'}}>
-          <NavigationLink to={'/lotso/'} title="LotsO">
-            Lots of data
-          </NavigationLink>
-          <NavigationLink to={'/string/'} title="String">
-            String
+          <NavigationLink to={'/svg/'} title="SVG">
+            SVG
           </NavigationLink>
           <NavigationLink to={'/about/'} title="About">
             About
