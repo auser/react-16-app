@@ -25,8 +25,8 @@ export const Sidebar = props => {
     <div className={props.className}>
       <h4>Sidebar</h4>
       <ul>
-        <SidebarLink name="home" />
-        <SidebarLink name="about-us" />
+        <SidebarLink {...props} name="home" />
+        <SidebarLink {...props} name="about-us" />
       </ul>
     </div>
   );

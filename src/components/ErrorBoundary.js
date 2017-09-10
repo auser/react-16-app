@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import Container from '../components/Container';
+
 export class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -15,8 +17,12 @@ export class ErrorBoundary extends React.Component {
   }
 
   render() {
+    const {className} = this.props;
+
     if (this.state.hasError)
-      return <div className="className">Something bad happened</div>;
+      return (
+        <Container className={className}>Something bad happened</Container>
+      );
 
     return this.props.children;
   }
