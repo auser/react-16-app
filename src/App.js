@@ -7,9 +7,11 @@ import './App.css';
 import Header from './components/Header';
 import FrontPage from './components/FrontPage';
 import Footer from './components/Footer';
+import ErrorBoundary from './components/ErrorBoundary';
 
 import Home from './pages/Home';
-import SVG from './pages/SVG';
+import NumberPage from './pages/NumberPage';
+import Buggy from './pages/Buggy';
 
 // Content container
 const Container = styled.div`
@@ -22,10 +24,13 @@ const App = props => (
   <FrontPage>
     <Header />
     <Container>
-      <Switch>
-        <Route path="/svg" component={SVG} />
-        <Route path="/" component={Home} />
-      </Switch>
+      <ErrorBoundary>
+        <Switch>
+          <Route path="/buggy" component={Buggy} />
+          <Route path="/numbers" component={NumberPage} />
+          <Route path="/" component={Home} />
+        </Switch>
+      </ErrorBoundary>
     </Container>
     <Footer />
   </FrontPage>

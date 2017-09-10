@@ -39,12 +39,10 @@ class NavigationHeader extends Component {
       <Header>
         <Logo to="/">Logo</Logo>
         <Navigation role="navigation" style={{top: menu ? 0 : '-100vh'}}>
-          <NavigationLink to={'/svg/'} title="SVG">
-            SVG
+          <NavigationLink to={'/numbers/'} title="Numbers">
+            Numbers
           </NavigationLink>
-          <NavigationLink to={'/about/'} title="About">
-            About
-          </NavigationLink>
+          <NavigationLink to={'/buggy/'}>Buggy</NavigationLink>
         </Navigation>
         <Toggle onClick={this.toggle('menu')} active={menu} />
       </Header>
